@@ -16,6 +16,39 @@ Instead, ShadowSync uses **raw TCP sockets** and a lightweight custom transfer p
 
 > 🚀 **Goal:** Fast local file transfer with minimal overhead, reliable streaming, and zero cloud dependency.
 
+## 📥 Installation
+
+> ### 🚀 Want to use ShadowSync without building it?
+>
+> **You don't need Flutter, Dart, Android Studio, or any development tools to use the pre-built releases.**
+>
+> ShadowSync provides ready-to-use builds for **Windows 🪟** and **Android 📱**.
+>
+> | Platform                 | Available | Quick Start               |
+> | ------------------------ | --------- | ------------------------- |
+> | 🪟 **Windows Installer** | ✅        | Run the setup file        |
+> | 📦 **Windows Portable**  | ✅        | Extract ZIP → Run `.exe`  |
+> | 📱 **Android APK**       | ✅        | Install `app-release.apk` |
+>
+> 👉 **[📦 View the complete installation guide →](INSTALLATION.md)**
+>
+> **Quick paths:**
+>
+> ```text
+> 📁 release/
+> ├── 🪟 Windows Setup
+> └── 📦 Windows Portable ZIP
+>
+> 📁 android/
+> └── 📱 app-release.apk
+> ```
+>
+> **Recommended for most users:**
+>
+> - 🪟 **Windows:** Use the **Setup** version.
+> - 📦 **Windows without installation:** Use the **Portable ZIP**.
+> - 📱 **Android:** Install **`app-release.apk`**.
+
 ---
 
 ## ✨ Features
@@ -43,7 +76,7 @@ Instead, ShadowSync uses **raw TCP sockets** and a lightweight custom transfer p
 
 ```bash
 git clone <your-repository-url>
-cd shadowsync/client
+cd shadowsync/
 ```
 
 ### 2️⃣ Install dependencies
@@ -118,7 +151,7 @@ flutter build appbundle --release
 - [🌐 Why Not HTTP?](#-why-not-http)
 - [☁️ Why Not Cloud Storage?](#️-why-not-cloud-storage)
 - [⚠️ Limitations](#️-limitations)
-- [Troubleshooting Issues](#️-troubleshooting-issues)
+- [Troubleshooting](#️-troubleshooting-issues)
 - [👨‍💻 Development](#‍-development)
 - [🔮 Future Improvements](#-future-protocol-improvements)
 - [📜 License](#-license)
@@ -931,8 +964,7 @@ A typical project structure is:
 
 ```text
 shadowsync/
-└── client/
-    ├── android/
+└── ├── android/
     ├── ios/
     ├── lib/
     │   ├── main.dart
