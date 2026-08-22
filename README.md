@@ -118,7 +118,7 @@ flutter build appbundle --release
 - [🌐 Why Not HTTP?](#-why-not-http)
 - [☁️ Why Not Cloud Storage?](#️-why-not-cloud-storage)
 - [⚠️ Limitations](#️-limitations)
-- [   Troubleshooting](#️-troubleshooting)
+- [ Troubleshooting Issues](#️-troubleshooting-issues)
 - [👨‍💻 Development](#‍-development)
 - [🔮 Future Improvements](#-future-protocol-improvements)
 - [📜 License](#-license)
@@ -1096,7 +1096,7 @@ Current limitations may include:
 
 ---
 
-# Troubleshooting
+# Troubleshooting Issues
 
 ## ❌ Cannot Connect
 
