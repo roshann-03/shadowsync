@@ -6,11 +6,11 @@
 
 It enables **Desktop ↔ Mobile** and **Mobile ↔ Mobile** file transfers directly over a local network without requiring:
 
-* ☁️ Cloud storage
-* 🌐 External file-hosting services
-* 🖥️ Node.js/Express servers
-* 🐘 PHP backends
-* 🔄 HTTP upload/download infrastructure
+- ☁️ Cloud storage
+- 🌐 External file-hosting services
+- 🖥️ Node.js/Express servers
+- 🐘 PHP backends
+- 🔄 HTTP upload/download infrastructure
 
 Instead, ShadowSync uses **raw TCP sockets** and a lightweight custom transfer protocol to stream files directly between trusted devices.
 
@@ -20,20 +20,20 @@ Instead, ShadowSync uses **raw TCP sockets** and a lightweight custom transfer p
 
 ## ✨ Features
 
-| Feature                       | Description                                            |
-| ----------------------------- | ------------------------------------------------------ |
-| ⚡ **High-Speed Transfer**     | Direct device-to-device TCP streaming                  |
-| 📱 **Mobile Support**         | Designed for Flutter mobile devices                    |
+| Feature                      | Description                                            |
+| ---------------------------- | ------------------------------------------------------ |
+| ⚡ **High-Speed Transfer**   | Direct device-to-device TCP streaming                  |
+| 📱 **Mobile Support**        | Designed for Flutter mobile devices                    |
 | 🖥️ **Desktop Support**       | Desktop ↔ mobile/local-device transfers                |
-| 🔌 **Raw TCP**                | Persistent TCP socket communication                    |
-| 📡 **Local Network**          | Works over Wi-Fi, hotspot, or compatible LAN           |
-| 📦 **Large Files**            | Streams files without loading the entire file into RAM |
-| 📁 **Multiple Files**         | Select and transfer multiple files sequentially        |
-| 📷 **QR Pairing**             | Connect using a QR-encoded IP/port                     |
+| 🔌 **Raw TCP**               | Persistent TCP socket communication                    |
+| 📡 **Local Network**         | Works over Wi-Fi, hotspot, or compatible LAN           |
+| 📦 **Large Files**           | Streams files without loading the entire file into RAM |
+| 📁 **Multiple Files**        | Select and transfer multiple files sequentially        |
+| 📷 **QR Pairing**            | Connect using a QR-encoded IP/port                     |
 | 🛡️ **Filename Sanitization** | Prevents unsafe filesystem paths                       |
-| 🔍 **Transfer Verification**  | Validates received file size                           |
+| 🔍 **Transfer Verification** | Validates received file size                           |
 | 🗂️ **File Vault**            | Browse, open, delete, and manage received files        |
-| ☁️ **No Cloud Required**      | Files remain between the connected peers               |
+| ☁️ **No Cloud Required**     | Files remain between the connected peers               |
 
 ---
 
@@ -86,44 +86,44 @@ flutter build appbundle --release
 
 # 🧭 Table of Contents
 
-* [✨ Features](#-features)
-* [🚀 Quick Start](#-quick-start)
-* [🏗️ Architecture](#️-architecture)
-* [🛠️ Technology Stack](#️-technology-stack)
-* [📡 Custom Transfer Protocol](#-custom-transfer-protocol)
-* [💻 Protocol Implementation](#-protocol-implementation)
-* [📦 File Transfer Pipeline](#-file-transfer-pipeline)
-* [🧠 TCP Byte Stream](#-tcp-byte-stream)
-* [📋 File Metadata](#-file-metadata)
-* [🔎 Transfer Verification](#-transfer-verification)
-* [📁 File Storage](#-file-storage)
-* [🛡️ Filename Safety](#️-filename-safety)
-* [🔌 Connection](#-connection)
-* [📷 QR Code Connection](#-qr-code-connection)
-* [📶 Network Requirements](#-network-requirements)
-* [🚧 AP Isolation](#-ap-isolation)
-* [🔐 VPNs & Virtual Networks](#-vpns--virtual-networks)
-* [🔥 Firewall](#-firewall)
-* [📂 File Selection](#-file-selection)
-* [📦 Multiple File Transfers](#-multiple-file-transfers)
-* [🕘 Transfer History](#-transfer-history)
-* [🗄️ Received File Vault](#️-received-file-vault)
-* [⚡ Performance](#-performance)
-* [🔒 Security](#-security)
-* [🔏 Data Privacy](#-data-privacy)
-* [🧯 Error Handling](#-error-handling)
-* [📁 Project Structure](#-project-structure)
-* [🔄 Transfer Lifecycle](#-transfer-lifecycle)
-* [❓ Why TCP?](#-why-tcp)
-* [🌐 Why Not HTTP?](#-why-not-http)
-* [☁️ Why Not Cloud Storage?](#️-why-not-cloud-storage)
-* [⚠️ Limitations](#️-limitations)
-* [🧰 Troubleshooting](#️-troubleshooting)
-* [👨‍💻 Development](#‍-development)
-* [🔮 Future Improvements](#-future-improvements)
-* [📜 License](#-license)
-* [⚠️ Disclaimer](#️-disclaimer)
-* [💭 Project Philosophy](#-project-philosophy)
+- [✨ Features](#-features)
+- [🚀 Quick Start](#-quick-start)
+- [🏗️ Architecture](#️-architecture)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [📡 Custom Transfer Protocol](#-custom-transfer-protocol)
+- [💻 Protocol Implementation](#-protocol-implementation)
+- [📦 File Transfer Pipeline](#-file-transfer-pipeline)
+- [🧠 TCP Byte Stream](#-tcp-byte-stream)
+- [📋 File Metadata](#-file-metadata)
+- [🔎 Transfer Verification](#-transfer-verification)
+- [📁 File Storage](#-file-storage)
+- [🛡️ Filename Safety](#️-filename-safety)
+- [🔌 Connection](#-connection)
+- [📷 QR Code Connection](#-qr-code-connection)
+- [📶 Network Requirements](#-network-requirements)
+- [🚧 AP Isolation](#-ap-isolation)
+- [🔐 VPNs & Virtual Networks](#-vpns--virtual-networks)
+- [🔥 Firewall](#-firewall)
+- [📂 File Selection](#-file-selection)
+- [📦 Multiple File Transfers](#-multiple-file-transfers)
+- [🕘 Transfer History](#-transfer-history)
+- [🗄️ Received File Vault](#️-received-file-vault)
+- [⚡ Performance](#-performance)
+- [🔒 Security](#-security)
+- [🔏 Data Privacy](#-data-privacy)
+- [🧯 Error Handling](#-error-handling)
+- [📁 Project Structure](#-project-structure)
+- [🔄 Transfer Lifecycle](#-transfer-lifecycle)
+- [❓ Why TCP?](#-why-tcp)
+- [🌐 Why Not HTTP?](#-why-not-http)
+- [☁️ Why Not Cloud Storage?](#️-why-not-cloud-storage)
+- [⚠️ Limitations](#️-limitations)
+- [🧰 Troubleshooting](#️-troubleshooting)
+- [👨‍💻 Development](#‍-development)
+- [🔮 Future Improvements](#-future-protocol-improvements)
+- [📜 License](#-license)
+- [⚠️ Disclaimer](#️-disclaimer)
+- [💭 Project Philosophy](#-project-philosophy)
 
 ---
 
@@ -167,25 +167,25 @@ There is **no required cloud relay** in the core transfer path.
 
 Flutter handles:
 
-* 🎨 Cross-platform UI
-* 📱 Application lifecycle
-* 📂 File selection
-* 💾 Storage integration
-* 📷 QR scanning
-* 🧩 Platform integration
+- 🎨 Cross-platform UI
+- 📱 Application lifecycle
+- 📂 File selection
+- 💾 Storage integration
+- 📷 QR scanning
+- 🧩 Platform integration
 
 ## 🎯 Dart
 
 Dart handles:
 
-* 🔌 TCP networking
-* 📡 Socket communication
-* 📂 File streaming
-* 🔤 Protocol encoding/decoding
-* 🧾 JSON serialization
-* 📊 Transfer state
-* 💾 Filesystem operations
-* 🔄 Connection handling
+- 🔌 TCP networking
+- 📡 Socket communication
+- 📂 File streaming
+- 🔤 Protocol encoding/decoding
+- 🧾 JSON serialization
+- 📊 Transfer state
+- 💾 Filesystem operations
+- 🔄 Connection handling
 
 ## 🔌 TCP Sockets
 
@@ -201,11 +201,11 @@ Once connected, the socket remains open while transfers are performed.
 
 TCP provides:
 
-* ✅ Reliable delivery
-* ✅ Ordered byte-stream delivery
-* ✅ Retransmission
-* ✅ Flow control
-* ✅ Connection state
+- ✅ Reliable delivery
+- ✅ Ordered byte-stream delivery
+- ✅ Retransmission
+- ✅ Flow control
+- ✅ Connection state
 
 ---
 
@@ -474,11 +474,11 @@ P2P_META:video.mp4|104857600||
 
 Which represents:
 
-| Property          | Value             |   |   |
-| ----------------- | ----------------- | - | - |
-| 📄 Filename       | `video.mp4`       |   |   |
-| 📏 Size           | `104857600 bytes` |   |   |
-| 🔚 Data delimiter | `                 |   | ` |
+| Property          | Value             |     |     |
+| ----------------- | ----------------- | --- | --- |
+| 📄 Filename       | `video.mp4`       |     |     |
+| 📏 Size           | `104857600 bytes` |     |     |
+| 🔚 Data delimiter | `                 |     | `   |
 
 The receiver parses the metadata before consuming the corresponding binary file data.
 
@@ -696,11 +696,11 @@ VPN software and virtual network adapters can affect local routing.
 
 Potential sources include:
 
-* 🔐 VPN clients
-* 🖥️ Virtual machines
-* 📦 Container networking
-* 🧪 Development network interfaces
-* 🔌 Virtual network adapters
+- 🔐 VPN clients
+- 🖥️ Virtual machines
+- 📦 Container networking
+- 🧪 Development network interfaces
+- 🔌 Virtual network adapters
 
 The displayed IP address may not always be the address reachable by the peer.
 
@@ -764,11 +764,11 @@ Example:
 
 Each file has its own:
 
-* Metadata
-* File size
-* Progress
-* Transfer state
-* Completion status
+- Metadata
+- File size
+- Progress
+- Transfer state
+- Completion status
 
 ---
 
@@ -786,8 +786,8 @@ ShadowSync maintains transfer records containing information such as:
 | 🌐 Peer       | `192.168.1.25`     |
 | 📁 Local path | Storage location   |
 | 📊 Bytes      | Transferred amount |
-| ✅ Status      | Completed          |
-| ❌ Error       | Error information  |
+| ✅ Status     | Completed          |
+| ❌ Error      | Error information  |
 
 ---
 
@@ -797,11 +797,11 @@ Received files are displayed in the application's file vault.
 
 Users can:
 
-* 👀 View files
-* 📂 Open files
-* 🗑️ Delete files
-* 🔄 Refresh the list
-* 📏 View file sizes
+- 👀 View files
+- 📂 Open files
+- 🗑️ Delete files
+- 🔄 Refresh the list
+- 📏 View file sizes
 
 Files remain stored locally rather than being uploaded to an external service.
 
@@ -849,16 +849,16 @@ Actual transfer speed depends on the entire network and storage pipeline.
 
 Important factors include:
 
-* 📶 Wi-Fi generation
-* 🔌 Ethernet speed
-* 📡 Signal quality
-* 📡 Router performance
-* 📱 Device hardware
-* 💾 Storage read speed
-* 💾 Storage write speed
-* 🌐 TCP congestion control
-* 📻 Network interference
-* ⚙️ Operating-system activity
+- 📶 Wi-Fi generation
+- 🔌 Ethernet speed
+- 📡 Signal quality
+- 📡 Router performance
+- 📱 Device hardware
+- 💾 Storage read speed
+- 💾 Storage write speed
+- 🌐 TCP congestion control
+- 📻 Network interference
+- ⚙️ Operating-system activity
 
 > 💡 **The slowest significant component of the pipeline can become the bottleneck.**
 
@@ -876,13 +876,13 @@ For trusted local environments, the architecture provides direct peer-to-peer co
 
 Future security enhancements may include:
 
-* 🔐 Peer authentication
-* 🔑 Session keys
-* 🛡️ TLS
-* 🔒 Application-level encryption
-* 🎟️ Transfer authorization
-* #️⃣ File integrity hashes
-* 🤝 Pairing tokens
+- 🔐 Peer authentication
+- 🔑 Session keys
+- 🛡️ TLS
+- 🔒 Application-level encryption
+- 🎟️ Transfer authorization
+- #️⃣ File integrity hashes
+- 🤝 Pairing tokens
 
 ---
 
@@ -910,16 +910,16 @@ There is no required third-party cloud service relaying the file.
 
 ShadowSync handles several failure conditions:
 
-* ❌ Invalid connection address
-* ⏱️ Connection timeout
-* 🔌 Connection loss
-* 🧾 Invalid metadata
-* 📄 Invalid filename
-* 📏 Invalid file size
-* 📦 Incomplete transfer
-* 💾 Storage failure
-* 🔌 Socket errors
-* 📂 Missing source files
+- ❌ Invalid connection address
+- ⏱️ Connection timeout
+- 🔌 Connection loss
+- 🧾 Invalid metadata
+- 📄 Invalid filename
+- 📏 Invalid file size
+- 📦 Incomplete transfer
+- 💾 Storage failure
+- 🔌 Socket errors
+- 📂 Missing source files
 
 When a transfer cannot be verified, the incomplete file can be removed instead of being reported as successfully transferred.
 
@@ -1024,12 +1024,12 @@ TCP provides:
 
 | Capability         | TCP |
 | ------------------ | --- |
-| Reliable delivery  | ✅   |
-| Ordered delivery   | ✅   |
-| Retransmission     | ✅   |
-| Flow control       | ✅   |
-| Connection state   | ✅   |
-| Congestion control | ✅   |
+| Reliable delivery  | ✅  |
+| Ordered delivery   | ✅  |
+| Retransmission     | ✅  |
+| Flow control       | ✅  |
+| Connection state   | ✅  |
+| Congestion control | ✅  |
 
 Therefore, ShadowSync does not need to implement raw packet retransmission.
 
@@ -1084,15 +1084,15 @@ ShadowSync is primarily designed for local-network transfers.
 
 Current limitations may include:
 
-* 📡 Both peers need network reachability.
-* 🔌 TCP port access must be available.
-* 🚧 Wi-Fi client isolation can prevent connections.
-* 🔥 Firewall rules can block connections.
-* 🔐 VPNs can interfere with routing.
-* 📶 Transfer speed depends on network quality.
-* 💾 Storage performance can become a bottleneck.
-* 🔒 The current protocol should be treated as a trusted-network protocol unless encryption/authentication is added.
-* 🔄 A disconnected TCP session can interrupt an active transfer unless application-level resume is implemented.
+- 📡 Both peers need network reachability.
+- 🔌 TCP port access must be available.
+- 🚧 Wi-Fi client isolation can prevent connections.
+- 🔥 Firewall rules can block connections.
+- 🔐 VPNs can interfere with routing.
+- 📶 Transfer speed depends on network quality.
+- 💾 Storage performance can become a bottleneck.
+- 🔒 The current protocol should be treated as a trusted-network protocol unless encryption/authentication is added.
+- 🔄 A disconnected TCP session can interrupt an active transfer unless application-level resume is implemented.
 
 ---
 
@@ -1102,15 +1102,15 @@ Current limitations may include:
 
 Check the following:
 
-* [ ] Both devices are connected to the same network.
-* [ ] The IP address is correct.
-* [ ] The TCP port is correct.
-* [ ] The firewall allows the connection.
-* [ ] AP/client isolation is disabled.
-* [ ] VPN software is not interfering.
-* [ ] Wi-Fi remains connected even if the network has no internet.
-* [ ] Connect to Wi-Fi **before opening ShadowSync**.
-* [ ] Only one instance of the application is running where required.
+- [ ] Both devices are connected to the same network.
+- [ ] The IP address is correct.
+- [ ] The TCP port is correct.
+- [ ] The firewall allows the connection.
+- [ ] AP/client isolation is disabled.
+- [ ] VPN software is not interfering.
+- [ ] Wi-Fi remains connected even if the network has no internet.
+- [ ] Connect to Wi-Fi **before opening ShadowSync**.
+- [ ] Only one instance of the application is running where required.
 
 ### Default port
 
@@ -1171,13 +1171,13 @@ If QR scanning does not work, manually enter the peer IP address:
 
 Check:
 
-* [ ] Wi-Fi signal strength
-* [ ] Device storage availability
-* [ ] Firewall behavior
-* [ ] Network stability
-* [ ] Whether the peer disconnected
-* [ ] Whether the receiving device has enough free storage
-* [ ] VPN/virtual-network configuration
+- [ ] Wi-Fi signal strength
+- [ ] Device storage availability
+- [ ] Firewall behavior
+- [ ] Network stability
+- [ ] Whether the peer disconnected
+- [ ] Whether the receiving device has enough free storage
+- [ ] VPN/virtual-network configuration
 
 ---
 
@@ -1247,16 +1247,16 @@ flutter run
 
 Network changes should be tested with:
 
-* [ ] Small files
-* [ ] Large files
-* [ ] Multiple files
-* [ ] Empty files
-* [ ] Files with unusual names
-* [ ] Duplicate filenames
-* [ ] Connection interruption
-* [ ] Device disconnection
-* [ ] Slow networks
-* [ ] High-speed networks
+- [ ] Small files
+- [ ] Large files
+- [ ] Multiple files
+- [ ] Empty files
+- [ ] Files with unusual names
+- [ ] Duplicate filenames
+- [ ] Connection interruption
+- [ ] Device disconnection
+- [ ] Slow networks
+- [ ] High-speed networks
 
 ---
 
@@ -1304,19 +1304,19 @@ flowchart LR
 
 Potential improvements include:
 
-* #️⃣ SHA-256 file verification
-* 🧩 Chunk-level integrity verification
-* 🔄 Resumable transfers
-* ❌ Transfer cancellation
-* ⏸️ Transfer pause/resume
-* 🤝 Peer capability negotiation
-* 📦 Concurrent transfer queues
-* 🚦 Bandwidth management
-* 🔐 Encryption
-* 👤 Peer authentication
-* 🔎 Automatic peer discovery
-* 🆔 Transfer IDs
-* 📊 More detailed transfer acknowledgements
+- #️⃣ SHA-256 file verification
+- 🧩 Chunk-level integrity verification
+- 🔄 Resumable transfers
+- ❌ Transfer cancellation
+- ⏸️ Transfer pause/resume
+- 🤝 Peer capability negotiation
+- 📦 Concurrent transfer queues
+- 🚦 Bandwidth management
+- 🔐 Encryption
+- 👤 Peer authentication
+- 🔎 Automatic peer discovery
+- 🆔 Transfer IDs
+- 📊 More detailed transfer acknowledgements
 
 ---
 
@@ -1328,24 +1328,24 @@ ShadowSync is distributed under a **custom non-commercial license**.
 
 The software may be:
 
-* Used privately
-* Used for educational purposes
-* Used for testing
-* Used for personal projects
-* Compiled and executed
-* Distributed without commercial profit
+- Used privately
+- Used for educational purposes
+- Used for testing
+- Used for personal projects
+- Compiled and executed
+- Distributed without commercial profit
 
 ## 🚫 Commercial Restrictions
 
 The software may not be:
 
-* Sold
-* Leased
-* Commercially licensed
-* Monetized
-* Repackaged for paid distribution
-* Used as a commercial service
-* Used to create a commercial derivative product
+- Sold
+- Leased
+- Commercially licensed
+- Monetized
+- Repackaged for paid distribution
+- Used as a commercial service
+- Used to create a commercial derivative product
 
 No individual, organization, or entity is authorized to commercially exploit the software without explicit permission from the copyright holder.
 
@@ -1359,17 +1359,17 @@ ShadowSync is provided on an **"AS IS"** basis.
 
 No warranty is provided regarding:
 
-* Network availability
-* Transfer speed
-* Device compatibility
-* Storage behavior
-* Operating-system behavior
-* Filesystem behavior
-* Hardware failures
-* Network interruptions
-* Data loss
-* Application crashes
-* Incomplete transfers
+- Network availability
+- Transfer speed
+- Device compatibility
+- Storage behavior
+- Operating-system behavior
+- Filesystem behavior
+- Hardware failures
+- Network interruptions
+- Data loss
+- Application crashes
+- Incomplete transfers
 
 Users are responsible for maintaining appropriate backups of important data.
 
@@ -1453,10 +1453,10 @@ flowchart TB
 
 If ShadowSync is useful to you:
 
-* ⭐ Star the repository
-* 🐛 Report bugs
-* 💡 Suggest improvements
-* 🔧 Submit pull requests
-* 📢 Share the project
+- ⭐ Star the repository
+- 🐛 Report bugs
+- 💡 Suggest improvements
+- 🔧 Submit pull requests
+- 📢 Share the project
 
-**Made with ❤️ using Flutter & Dart.**
+**Made with ❤️ By Roshan & Zaid using Flutter & Dart.**
