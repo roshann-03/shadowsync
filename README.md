@@ -118,7 +118,7 @@ flutter build appbundle --release
 - [🌐 Why Not HTTP?](#-why-not-http)
 - [☁️ Why Not Cloud Storage?](#️-why-not-cloud-storage)
 - [⚠️ Limitations](#️-limitations)
-- [ Troubleshooting Issues](#️-troubleshooting-issues)
+- [Troubleshooting Issues](#️-troubleshooting-issues)
 - [👨‍💻 Development](#‍-development)
 - [🔮 Future Improvements](#-future-protocol-improvements)
 - [📜 License](#-license)
